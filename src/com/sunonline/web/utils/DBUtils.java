@@ -26,10 +26,10 @@ public class DBUtils {
 	 */
 	public Connection getCon() {
 		//从配置文件获取连接参数实际值
-		DB_Driver = WebConfig.getInstance().getProperty("db_driver");
-		DB_URL = WebConfig.getInstance().getProperty("db_url");
-		DB_username = WebConfig.getInstance().getProperty("db_username");
-		DB_password = WebConfig.getInstance().getProperty("db_password");
+		DB_Driver = DBConfig.getInstance().getProperty("db_driver");
+		DB_URL = DBConfig.getInstance().getProperty("db_url");
+		DB_username = DBConfig.getInstance().getProperty("db_username");
+		DB_password = DBConfig.getInstance().getProperty("db_password");
 		try {
 			//加载驱动
 			Class.forName(DB_Driver);

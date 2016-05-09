@@ -10,16 +10,16 @@ import java.util.Properties;
  * 读取配置文件，采用单例模式，保证每次获取的是同一个实例
  *
  */
-public final class WebConfig extends Properties {
+public final class DBConfig extends Properties {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private static WebConfig instance;
-	//获取webconfig实例
-	public static WebConfig getInstance() {
+	private static DBConfig instance;
+	//获取DBConfig实例
+	public static DBConfig getInstance() {
 		if (instance != null) {
 			return instance;
 		} else {
@@ -28,13 +28,13 @@ public final class WebConfig extends Properties {
 		}
 	}
 	//创建实例
-	public static void createInstance() {
+	public static synchronized void createInstance() {
 		if (instance == null) {
-			instance = new WebConfig();
+			instance = new DBConfig();
 		}
 	}
 	
-	public WebConfig() {
+	public DBConfig() {
 		try {
 			load(new BufferedInputStream(
 					new FileInputStream("src/DB.properties")));
