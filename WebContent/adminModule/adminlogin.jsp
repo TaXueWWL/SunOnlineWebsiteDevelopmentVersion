@@ -36,7 +36,7 @@
 				value=<%=request.getAttribute("admin_name") != null ? request.getAttribute("admin_name") : ""%>>
 			<!-- 错误提示回显 -->
 			<p id="nametip"></p>
-			<input type="password" name="password" class="password" placeholder="Password">
+			<input type="password" name="password" class="password" placeholder="请输入密码">
 			
 			<p id="passtip">
 				<%=request.getAttribute("errorMsg") != null ? request.getAttribute("errorMsg") : ""%>
