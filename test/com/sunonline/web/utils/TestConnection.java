@@ -17,7 +17,7 @@ public class TestConnection {
 	public void test() throws SQLException {
 		DBUtils dbUtils = new DBUtils();
 		System.out.println(dbUtils.getCon().getClass());
-		dbUtils.closeCon(dbUtils.getCon(), null, null, null);
+//		dbUtils.closeCon(dbUtils.getCon(), null, null, null);
 	}
 
 }

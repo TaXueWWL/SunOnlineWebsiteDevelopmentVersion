@@ -2,10 +2,10 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-< <head>
+<head>
 
         <meta charset="utf-8">
-        <title>Fullscreen Login</title>
+        <title>太阳在线后台登录</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -26,12 +26,15 @@
     <body>
 
         <div class="page-container">
-            <h1>Login</h1>
-            <form action="VerifyAdminLogin" method="post">
-                <input type="text" name="username" class="username" placeholder="Username">
-                <input type="password" name="password" class="password" placeholder="Password">
-                <button type="submit">Sign me in</button>
-                <div class="error"><span>+</span></div>
+            <h1>管 理 员 登 录</h1>
+            <form action="VerifyAdminLoginServlet" method="post">
+            	<!-- 回显用户名 -->
+                <input type="text" name="admin_name" class="username" placeholder="请输入用户名" value=<%=request.getAttribute("admin_name") %>>
+                	<!-- 错误提示回显 -->
+                	<br/><span><font color="red"><%=request.getAttribute("errorMsg")!=null?request.getAttribute("errorMsg"):"" %></font></span>
+                <input type="password" name="admin_pwd" class="password" placeholder="请输入密码">
+                <button type="submit">登 录</button>
+                <div class="error"><span>！</span></div>
             </form>
             <div class="connect">
                 <p>Or connect with:</p>
@@ -41,7 +44,8 @@
                 </p>
             </div>
         </div>
-        <div align="center">Collect from <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a></div>
+        <br/>
+        <div align="center"><font color="orange">2016太阳在线 All rights Reserved</font></div>
 
         <!-- Javascript -->
         <script src="assets/js/jquery-1.8.2.min.js"></script>
