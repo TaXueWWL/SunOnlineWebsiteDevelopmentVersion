@@ -37,11 +37,6 @@
                 <div class="error"><span>！</span></div>
             </form>
             <div class="connect">
-                <p>Or connect with:</p>
-                <p>
-                    <a class="facebook" href=""></a>
-                    <a class="twitter" href=""></a>
-                </p>
             </div>
         </div>
         <br/>
