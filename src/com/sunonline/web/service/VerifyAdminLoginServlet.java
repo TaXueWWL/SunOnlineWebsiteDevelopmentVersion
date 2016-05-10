@@ -45,8 +45,8 @@ public class VerifyAdminLoginServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		/* 验证登录 */
-		String adminName = request.getParameter("admin_name");
-		String adminPwd = request.getParameter("admin_pwd");
+		String adminName = request.getParameter("username");
+		String adminPwd = request.getParameter("password");
 
 		System.out.println(adminName + "=====" + adminPwd);
 		/* 使用AdminInfoDao验证是否是管理员 */
@@ -60,7 +60,7 @@ public class VerifyAdminLoginServlet extends HttpServlet {
 				request.getRequestDispatcher("/adminModule/adminindex.jsp").forward(request, response);
 			} else {
 				/* 登录失败返回登录页重新登录 */
-				request.setAttribute("errorMsg", "管理员身份认证错误，<br/>请核对您的账号及密码重新登录");
+				request.setAttribute("errorMsg", "管理员身份认证错误");
 				request.setAttribute("admin_name", adminName);
 				request.getRequestDispatcher("/adminModule/adminlogin.jsp").forward(request, response);
 			}
