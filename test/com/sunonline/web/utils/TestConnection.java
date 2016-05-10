@@ -6,7 +6,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import org.junit.Test;
-
+/**
+ * 
+ * @author 武文良
+ *
+ */
 public class TestConnection {
 
 	@Test

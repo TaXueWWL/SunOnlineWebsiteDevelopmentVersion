@@ -12,9 +12,6 @@ import java.util.Properties;
  */
 public final class DBConfig extends Properties {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	private static DBConfig instance;
