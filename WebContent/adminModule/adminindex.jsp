@@ -20,7 +20,8 @@
             <div id="ad_setting" class="ad_setting">
                 <a class="ad_setting_a" href="javascript:; ">
                     <i class="icon-user glyph-icon" style="font-size: 20px"></i>
-                    <span style="color:#FCFCFC">管理员</span>
+                    <!-- 从session中取出当前登录的管理员名称 -->
+                    <span style="color:#FCFCFC">管理员<font color="red"><%=session.getAttribute("admin_name") %></font></span>
                     <i class="icon-chevron-down glyph-icon"></i>
                 </a>
                 <ul class="dropdown-menu-uu" style="display: none" id="ad_setting_ul">

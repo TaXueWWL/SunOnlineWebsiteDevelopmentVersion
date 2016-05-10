@@ -8,7 +8,7 @@ import java.util.Properties;
  * @author 武文良
  * <p>date 2016.5.9</p>
  * 读取配置文件，采用单例模式，保证每次获取的是同一个实例
- *
+ *	@deprecated
  */
 public final class DBConfig extends Properties {
 	

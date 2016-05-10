@@ -5,9 +5,7 @@ import com.sunonline.web.global.StringGlobal;
 
 /**
  * @author 武文良
- * <p>
- * date 2016.5.9
- * </p>
+ * @date 2016.5.9
  * <p>
  * 字符串加密工具类
  * </p>

@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import com.sunonline.web.global.DBGlobal;
 /**
  * @author 武文良
  * <p>date 2016.5.9</p>
@@ -15,27 +17,19 @@ public class DBUtils {
 
 	private Connection connection = null;
 	
-	//定义数据库连接参数
-	private String DB_Driver = null;
-	private String DB_URL = null;
-	private String DB_username = null;
-	private String DB_password = null;
 	/**
 	 * 获取数据库连接
 	 * @return connection
 	 */
 	public Connection getCon() {
-		//从配置文件获取连接参数实际值
-		DB_Driver = DBConfig.getInstance().getProperty("db_driver");
-		DB_URL = DBConfig.getInstance().getProperty("db_url");
-		DB_username = DBConfig.getInstance().getProperty("db_username");
-		DB_password = DBConfig.getInstance().getProperty("db_password");
+
 		try {
 			//加载驱动
-			Class.forName(DB_Driver);
+			Class.forName(DBGlobal.DB_DRIVER);
 			//建立连接
-			connection = DriverManager.getConnection(DB_URL, DB_username, DB_password);
-			System.out.println("connection successfully");
+			connection = DriverManager.getConnection(
+					DBGlobal.DB_URL, DBGlobal.DB_USERNAME, DBGlobal.DB_PASSWORD);
+			System.out.println( "connected==>" + connection.getMetaData().getURL());
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
