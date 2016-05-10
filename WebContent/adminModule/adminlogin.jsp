@@ -28,7 +28,8 @@
         <div class="page-container">
             <h1>管 理 员 登 录</h1>
             <form action="VerifyAdminLoginServlet" method="post">
-                <input type="text" name="admin_name" class="username" placeholder="请输入用户名">
+            	<!-- 回显用户名 -->
+                <input type="text" name="admin_name" class="username" placeholder="请输入用户名" value=<%=request.getAttribute("admin_name") %>>
                 	<!-- 错误提示回显 -->
                 	<br/><span><font color="red"><%=request.getAttribute("errorMsg")!=null?request.getAttribute("errorMsg"):"" %></font></span>
                 <input type="password" name="admin_pwd" class="password" placeholder="请输入密码">

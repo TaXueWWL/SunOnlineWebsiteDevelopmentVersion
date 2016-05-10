@@ -61,6 +61,7 @@ public class VerifyAdminLoginServlet extends HttpServlet {
 			} else {
 				/* 登录失败返回登录页重新登录 */
 				request.setAttribute("errorMsg", "管理员身份认证错误，<br/>请核对您的账号及密码重新登录");
+				request.setAttribute("admin_name", adminName);
 				request.getRequestDispatcher("/adminModule/adminlogin.jsp").forward(request, response);
 			}
 
