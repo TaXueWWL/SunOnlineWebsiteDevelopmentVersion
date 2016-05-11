@@ -9,9 +9,9 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <!-- 管理员密码验证servlet -->
+  <!-- author:snowalker -->
   <servlet>
-    <description></description>
+    <description>管理员登录验证Servlet</description>
     <display-name>VerifyAdminLoginServlet</display-name>
     <servlet-name>VerifyAdminLoginServlet</servlet-name>
     <servlet-class>com.sunonline.web.service.VerifyAdminLoginServlet</servlet-class>
@@ -20,5 +20,26 @@
     <servlet-name>VerifyAdminLoginServlet</servlet-name>
     <url-pattern>/adminModule/VerifyAdminLoginServlet</url-pattern>
   </servlet-mapping>
-
+  <!-- author:snowalker -->
+  <!-- 该过滤器主要是为了防止不经过登录直接进入后台 -->
+  <filter>
+  	<description>管理员会话过滤器</description>
+    <display-name>AdminSessionCheckFilter</display-name>
+    <filter-name>AdminSessionCheckFilter</filter-name>
+    <filter-class>com.sunonline.web.filters.AdminSessionCheckFilter</filter-class>
+    <init-param>
+    	<description>管理员登录页</description>
+    	<param-name>adminLoginPage</param-name>
+    	<param-value>/adminModule/adminlogin.jsp</param-value>
+    </init-param>
+    <init-param>
+    	<description>管理员登录验证Servlet</description>
+    	<param-name>adminVerifyServlet</param-name>
+    	<param-value>VerifyAdminLoginServlet</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>AdminSessionCheckFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>

@@ -39,7 +39,9 @@
 				placeholder="请输入用户名"
 				value=<%=request.getAttribute("admin_name") != null ? request.getAttribute("admin_name") : ""%>>
 			<!-- 错误提示回显 -->
-			<p id="nametip"></p>
+			<p id="nametip">
+				
+			</p>
 			<input type="password" name="password" class="password"
 				placeholder="请输入密码">
 
