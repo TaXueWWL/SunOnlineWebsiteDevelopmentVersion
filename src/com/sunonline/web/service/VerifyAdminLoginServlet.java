@@ -18,8 +18,8 @@ import com.sunonline.web.daoImpl.AdminInfoDaoImpl;
 
 /**
  * 验证管理员登录Servlet
- * 
- * @author SnoWalker.wwl
+ * @date 2016.5.11
+ * @author 武文良
  *
  */
 public class VerifyAdminLoginServlet extends HttpServlet {
