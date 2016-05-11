@@ -15,8 +15,6 @@
 <meta name="author" content="">
 
 <!-- CSS -->
-<link rel='stylesheet'
-	href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
 <link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/supersized.css">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -40,7 +38,6 @@
 				value=<%=request.getAttribute("admin_name") != null ? request.getAttribute("admin_name") : ""%>>
 			<!-- 错误提示回显 -->
 			<p id="nametip">
-				
 			</p>
 			<input type="password" name="password" class="password"
 				placeholder="请输入密码">
