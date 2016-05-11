@@ -30,6 +30,8 @@ public class TestAdminInfoDaoImpl {
 		 */
 		assertEquals(true, adminInfoDao.isAdmin("admin1", "123456"));
 		System.out.println(adminInfoDao.isAdmin("admin1", "123456"));
+		assertEquals(true, adminInfoDao.isAdmin("snowalker", "snowalker"));
+		
 	}
 
 }
