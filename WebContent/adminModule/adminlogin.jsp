@@ -3,7 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-
+<%
+	response.setHeader("Pragma","No-cache");
+	response.setHeader("Cache-Control","no-cache");
+	response.setDateHeader("Expires", 0);
+%>
 <meta charset="utf-8">
 <title>太阳在线后台登录</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +30,7 @@
 
 <body>
 
+
 	<div class="page-container">
 		<h1>管 理 员 登 录</h1>
 		<form action="VerifyAdminLoginServlet" method="post">
@@ -35,8 +40,9 @@
 				value=<%=request.getAttribute("admin_name") != null ? request.getAttribute("admin_name") : ""%>>
 			<!-- 错误提示回显 -->
 			<p id="nametip"></p>
-			<input type="password" name="password" class="password" placeholder="请输入密码">
-			
+			<input type="password" name="password" class="password"
+				placeholder="请输入密码">
+
 			<p id="passtip">
 				<%=request.getAttribute("errorMsg") != null ? request.getAttribute("errorMsg") : ""%>
 			</p>

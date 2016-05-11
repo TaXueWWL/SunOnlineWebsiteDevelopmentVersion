@@ -27,10 +27,10 @@
                 <ul class="dropdown-menu-uu" style="display: none" id="ad_setting_ul">
                     <li class="ad_setting_ul_li"> <a href="javascript:;"><i class="icon-user glyph-icon"></i> 个人中心 </a> </li>
                     <li class="ad_setting_ul_li"> <a href="javascript:;"><i class="icon-cog glyph-icon"></i> 设置 </a> </li>
-                    <li class="ad_setting_ul_li"> <a href="javascript:;"><i class="icon-signout glyph-icon"></i> <span class="font-bold">注销</span> </a> </li>
+                    <li class="ad_setting_ul_li"> <a href="adminlogout_pro.jsp"><i class="icon-signout glyph-icon"></i> <span class="font-bold">注销</span> </a> </li>
                 </ul>
             </div>
-    </div>
+	</div>
     <!--顶部结束-->
     <!--菜单-->
     <div class="layout_left_menu">
@@ -85,5 +85,11 @@
     <div class="layout_footer">
         <p>Copyright © 2016 - 太阳在线</p>
     </div>
+    
+    <script type="text/javascript">
+	$(document).ready(function(){
+		window.history.forward(1);
+	});
+	</script>
 </body>
 </html>
