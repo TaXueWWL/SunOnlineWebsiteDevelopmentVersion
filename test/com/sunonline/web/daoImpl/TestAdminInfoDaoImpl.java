@@ -28,8 +28,8 @@ public class TestAdminInfoDaoImpl {
 		/*
 		 * 登录成功测试
 		 */
-		assertEquals(true, adminInfoDao.isAdmin("admin", "12345"));
-		System.out.println(adminInfoDao.isAdmin("admin", "12345"));
+		assertEquals(true, adminInfoDao.isAdmin("admin1", "123456"));
+		System.out.println(adminInfoDao.isAdmin("admin1", "123456"));
 	}
 
 }
